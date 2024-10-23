@@ -1,6 +1,8 @@
 const intialCounterState = {
     count: 0
 }
+
+//first reducer
 export const counterReducer = (state = intialCounterState, action) => {
     switch(action.type){
         case 'INCREMENT':
@@ -16,7 +18,7 @@ export const counterReducer = (state = intialCounterState, action) => {
 
 
 
-
+//second reducer
 const intialUserState = {
     name: "",
     loggedIn: 'false'
