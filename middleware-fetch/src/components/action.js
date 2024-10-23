@@ -10,3 +10,5 @@ export const fetchData = () =>{
         }
     }
 }
+
+//middleware fetch using reduc-core
