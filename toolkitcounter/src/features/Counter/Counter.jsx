@@ -4,7 +4,7 @@ import { increment, decrement, incrementFive, reset } from './counterSlice'
 
 
 function Counter() {
-
+  //counter using redux toolkit
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
   return (
