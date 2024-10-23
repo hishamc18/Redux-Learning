@@ -4,6 +4,8 @@ const intialState = {
     count: 0,
 };
 
+
+//using traditional redux
 function counterReducer(state = intialState, action) {
     switch (action.type) {
         case "INCREMENT":
