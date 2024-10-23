@@ -5,7 +5,7 @@ function Sum() {
 
     const firstNumber = useSelector((state) => state.sumtask.firstNumber)
     const secondNumber = useSelector((state) => state.sumtask.secondNumber)
-    const sum = firstNumber + secondNumber
+    const sum = firstNumber + secondNumber  //sum of two inputs
 
 
   return (
