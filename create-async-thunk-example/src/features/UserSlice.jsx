@@ -15,7 +15,7 @@ export const userSlice = createSlice({
     },
     reducers: {},
     extraReducers: (builder) => {
-        builder   //builder is afn provided b building pattern of createSlice, which do the work of a switch
+        builder   //builder is a fn provided by building pattern of createSlice, which do the work of a switch
         .addCase(fetchUsers.pending, (state) => {
             state.status = 'loading'
         })
