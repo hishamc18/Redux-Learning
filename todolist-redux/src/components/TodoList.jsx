@@ -24,8 +24,8 @@ function TodoList() {
     }
 
     const handleSave = (index) =>{
-        dispatch(editTodo({index, newText: editText}))
-        setEditId(null)
+        dispatch(editTodo({index, newText: editText}));
+        setEditId(null);
     }
 
     return (

@@ -15,20 +15,18 @@ export const userSlice = createSlice({
     },
     reducers: {},
     extraReducers: (builder) => {
-        builder   //builder is a fn provided by building pattern of createSlice, which do the work of a switch
-        .addCase(fetchUsers.pending, (state) => {
-            state.status = 'loading'
-        })
-
-        .addCase(fetchUsers.fulfilled, (state, action) => {
-            state.status = 'succeeded';
-            state.users = action.payload;
-        })
-
-        .addCase(fetchUsers.rejected, (state, action) => {
-            state.status = 'rejected';
-            state.error = action.error.message;
-        });
+        builder //builder is a fn provided by building pattern of createSlice, which do the work of a switch
+            .addCase(fetchUsers.pending, (state) => {
+                state.status = "loading";
+            })
+            .addCase(fetchUsers.fulfilled, (state, action) => {
+                state.status = "succeeded";
+                state.users = action.payload;
+            })
+            .addCase(fetchUsers.rejected, (state, action) => {
+                state.status = "rejected";
+                state.error = action.error.message;
+            });
     },
 });
 
