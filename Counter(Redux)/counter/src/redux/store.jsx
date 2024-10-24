@@ -5,7 +5,7 @@ const intialState = {
 };
 
 
-//using traditional redux
+//using redux(core)
 function counterReducer(state = intialState, action) {
     switch (action.type) {
         case "INCREMENT":
