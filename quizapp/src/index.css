@@ -64,6 +64,12 @@ input {
   margin-bottom: -2em;
 }
 
+.Toastify__toast--error {
+  background-color: #dc3545 !important; 
+  color: #fff !important
+}
+
+
 @media (max-width: 768px) {
   .quizApp {
     padding: 3em;

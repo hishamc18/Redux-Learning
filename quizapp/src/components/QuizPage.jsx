@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { selectAnswer, calculateResults } from '../slices/quizSlice';
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function QuizPage() {
@@ -24,7 +24,7 @@ function QuizPage() {
             toast.error("Please answer all questions.");
         }
     };
-    
+
     return (
       <div className='quizApp'>
         {questions.map((q) => (
@@ -45,7 +45,18 @@ function QuizPage() {
           </div>
         ))}
         <div className="btn"><button onClick={handleSubmit}>Submit</button></div>
-        <ToastContainer />
+        <ToastContainer 
+                        position="top-center"
+                        autoClose={1300}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        transition={Slide}
+                        />
       </div>
     );
 }
