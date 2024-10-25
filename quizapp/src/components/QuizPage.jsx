@@ -24,9 +24,7 @@ function QuizPage() {
             toast.error("Please answer all questions.");
         }
     };
-
-    const allAnswered = questions.every((q) => selectedAnswers[q.id]);
-  
+    
     return (
       <div className='quizApp'>
         {questions.map((q) => (
@@ -47,6 +45,7 @@ function QuizPage() {
           </div>
         ))}
         <div className="btn"><button onClick={handleSubmit}>Submit</button></div>
+        <ToastContainer />
       </div>
     );
 }

@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import QuizPage from "./components/QuizPage";
 import ResultPage from "./components/ResultPage";
 
-
 function App() {
   return (
     <Router>

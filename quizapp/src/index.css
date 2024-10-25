@@ -21,21 +21,23 @@ a:hover {
   color: #535bf2;
 }
 
-.quizApp{
+
+.quizApp {
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 3em;
   border: 0.5em solid white;
-  padding: 5em;
+  padding: 3em 5em;
   border-radius: 3em;
-  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.quizApp label{
+.quizApp label {
   padding: 0.8em;
 }
 
-.result{
+.result {
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -43,23 +45,81 @@ a:hover {
   letter-spacing: 1px;
 }
 
-.result h3{
+.result h3 {
   font-size: 1.4em;
 }
 
-label{
+label {
   cursor: pointer;
 }
 
-input{
+input {
   transform: scale(1.3);
   margin-right: 0.7em;
 }
 
-.btn{
+.btn {
   margin: 0 auto;
   margin-top: 3em;
+  margin-bottom: -2em;
 }
+
+@media (max-width: 768px) {
+  .quizApp {
+    padding: 3em;
+    border-width: 0.3em;
+    border-radius: 2em;
+  }
+
+  .result {
+    padding: 2em;
+  }
+
+  .result h3 {
+    font-size: 1.2em;
+  }
+  
+  input {
+    transform: scale(1.2);
+  }
+  
+  label{
+    display: flex;
+  }
+
+  .quizApp h2{
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .quizApp {
+    padding: 2em;
+    gap: 0.4em;
+    border-width: 0.2em;
+    border-radius: 1em;
+  }
+
+  .result {
+    padding: 1.5em;
+    letter-spacing: 0.5px;
+  }
+
+  .result h3 {
+    font-size: 1em;
+  }
+
+  input {
+    transform: scale(1.1);
+    margin-right: 0.5em;
+  }
+  
+  .btn {
+    margin-top: 2em;
+  }
+}
+
 
 body {
   margin: 0;
