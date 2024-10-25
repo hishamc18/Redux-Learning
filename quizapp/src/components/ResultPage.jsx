@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function ResultPage() {
     const results = useSelector((state) => state.quiz.results);
+    const questions = useSelector((state) => state.quiz.questions)
     const navigate = useNavigate()
 
     return (
@@ -12,6 +13,7 @@ function ResultPage() {
             <div><button onClick={() => navigate("/", {replace: true})}>Home</button></div>
             <h1 style={{letterSpacing: "20px"}}>RESULTS</h1>
             <div>
+                <h2>Total: {questions.length} Questions</h2> <br />
                 <h3 style={{ color: "hsl(109, 95%, 45%)" }}>Correct Answers: {results.correct}</h3>
                 <h3 style={{ color: "red" }}>Wrong Answers: {results.incorrect}</h3>
             </div>
